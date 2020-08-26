@@ -29,6 +29,11 @@ arr = soup.find(id="anime_recommendation")
 
 arr3 = soup.find_all("a", class_="link bg-center")
 for k in arr3:
-    uprint(k["href"])
+    # uprint(k["href"])
+    # print(k["href"].split("/")[-1])
+    compare_code = k["href"].split("/")[-1].split("-")
+    compare_code.remove("31240")
+    print(compare_code[0])
+
 
 # Belum : jumlah user
