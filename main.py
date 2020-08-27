@@ -20,20 +20,20 @@ url    = "https://myanimelist.net/anime/31240"
 webUrl = urllib.request.urlopen(url)
 data   = webUrl.read()
 
-
 soup = BeautifulSoup(data, 'html.parser')
 arr = soup.find(id="anime_recommendation")
 
-# <div class="anime-slide-block" id="anime_recommendation" data-json=\'{"width":702,"btnWidth":40,"margin":8}\'>
-# <li class="btn-anime" style="width:90px" title="Steins;Gate"><a class="link bg-center" href="https://myanimelist.net/recommendations/anime/9253-31240" style="width:90px;height:140px;"><span class="title fs10">Steins;Gate</span><span class="users">93 Users</span><img alt="Steins;Gate" border="0" class="image lazyload" data-src="https://cdn.myanimelist.net/r/90x140/images/anime/5/73199.jpg?s=845a91477804f22f90e5a37faa1d76a6" data-srcset="https://cdn.myanimelist.net/r/90x140/images/anime/5/73199.jpg?s=845a91477804f22f90e5a37faa1d76a6 1x,https://cdn.myanimelist.net/r/180x280/images/anime/5/73199.jpg?s=0e8d9c7f7140a5583adfaf1556635774 2x" height="140" src="https://cdn.myanimelist.net/images/spacer.gif" width="90"/></a></li>
+anime_and_vote = []
+arr2 = soup.find_all("a", class_="link bg-center")
 
-arr3 = soup.find_all("a", class_="link bg-center")
-for k in arr3:
-    # uprint(k["href"])
-    # print(k["href"].split("/")[-1])
-    compare_code = k["href"].split("/")[-1].split("-")
+arr3 = soup.find_all("span", class_="users")
+
+for k in range(len(arr2)):
+    compare_code = arr2[k]["href"].split("/")[-1].split("-")
     compare_code.remove("31240")
-    print(compare_code[0])
+    code_anime = compare_code[0]
+    vote = arr3[k].string.split(" ")[0]
+    anime_and_vote.append([code_anime, vote])
 
-
-# Belum : jumlah user
+for i in anime_and_vote:
+    print(i)
