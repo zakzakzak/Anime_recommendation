@@ -5,13 +5,21 @@
 
 
 </script>
-Hello this is the dashboard page
+
 
 <!-- selain json, bisajuga html5 fetch dan axios -->
+<form class="ui form" action="/result" method="POST" enctype="multipart/form-data">
+  <div class="field">
+    <input type="text" name="anime1" placeholder="Tulis kode anime">
+  </div>
+  <div class="field">
+    <input type="text" name="anime2" placeholder="Tulis kode anime">
+  </div>
 
-<button class="ui button primary">
-  Follow
-</button>
+  <button class="ui button primary" type="submit">OK</button>
+  <button class="ui button primary" type="submit">+</button>
+</form>
+
 
 
 {% endblock %}
