@@ -31,6 +31,7 @@ def get_recommendation(anime_input_code):
     url    = "https://myanimelist.net/anime/" + anime_input_code
     webUrl = urllib.request.urlopen(url)
     data   = webUrl.read()
+    time.sleep(1)
 
     # 2. Menganalisis data html dengan bs4 untuk memudahkan pencarian tag
     soup = BeautifulSoup(data, 'html.parser')
@@ -40,6 +41,7 @@ def get_recommendation(anime_input_code):
     anime_and_users = []
     arr2 = soup.find_all("a", class_="link bg-center")
     arr3 = soup.find_all("span", class_="users")
+    arr4 = soup.find_all("span", class_="title fs10")
 
     # 4. Menyatukan temuan kode anime dan jumlah users
     for k in range(len(arr2)):
@@ -47,7 +49,8 @@ def get_recommendation(anime_input_code):
         compare_code.remove(anime_input_code)
         code_anime = compare_code[0]
         users = arr3[k].string.split(" ")[0]
-        anime_and_users.append([code_anime, int(users)])
+        anime_title = arr4[k].string
+        anime_and_users.append([code_anime, anime_title, int(users)])
 
     # 5. Mengembalikan kode anime rekomendasi beserta jumlah users dalam sebuah list
     return anime_and_users
@@ -59,9 +62,9 @@ def big_list_recommendation(arr_anime):
 
         for i in anime:
             try:
-                anime_all_reco[i[0]] = [anime_all_reco[i[0]][0] + i[1], anime_all_reco[i[0]][1] + 1 ]
+                anime_all_reco[i[0]] = [i[1], anime_all_reco[i[0]][1] + i[2], anime_all_reco[i[0]][2] + 1 ]
             except:
-                anime_all_reco[i[0]] = [i[1], 1]
+                anime_all_reco[i[0]] = [i[1], i[2], 1]
 
     return anime_all_reco
 
@@ -90,7 +93,9 @@ def big_list_recommendation(arr_anime):
 #
 #     return anime_all_reco
 # ==============================================================================
-
+# big_ls = big_list_recommendation(["31240", "9253"])
+# for i in big_ls:
+#     uprint(big_ls[i])
 
 """
 Rezero s1 = 31240
@@ -102,5 +107,8 @@ x anime input x nilai vote user => jadi anime rekomendasi akan di kalikan dengan
 x jumlah user anime rekomendasi x nilai asli mal
 
 Fitur tambahan rencana :
-Judul anime
+x Judul anime
+x Simpan semua judul anime index 1-9999
+Langsung ambil judul di satu page anime inputan
+
 """

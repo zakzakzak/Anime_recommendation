@@ -15,19 +15,22 @@
 
 
 
-<table class="ui sortable celled table">
+<table class="ui inverted teal table">
         <thead>
             <tr>
+                <th></th>
                 <th>Anime title</th>
                 <th class="sorted ascending">Users reccomendation collective</th>
                 <th>Anime total</th>
             </tr>
         </thead>
         <tbody>
+          {% set count = 1 %}
+
           {% for dt in data %}
           <tr>
-
-            <td><a href="https://myanimelist.net/anime/{{dt[0]}}">{{ dt[1] }}</a></td>
+            <td>{{loop.index}}</td>
+            <td><a href="https://myanimelist.net/anime/{{dt[0]}}" style="color: rgb(255,255, 255)">{{ dt[1] }}</a></td>
             <td>{{ dt[2] }}</td>
             <td>{{ dt[3] }}</td>
           </tr>
