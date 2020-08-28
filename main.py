@@ -32,7 +32,7 @@ async def create_upload_file(request : Request , anime1: str = File(...), anime2
     for i in reco:
 
         print(i)
-        arr_reco.append([mal_scrap.get_title(i), reco[i][0], reco[i][1]])
+        arr_reco.append([i, mal_scrap.get_title(i), reco[i][0], reco[i][1]])
 
     return templates.TemplateResponse("download.html",{
       "request" : request,

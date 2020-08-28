@@ -3,34 +3,42 @@
 {% block content %}
 <script>
 
+    $(document).ready(function(){
+
+    $('table').tablesort()
+    });
 
 </script>
 
 
 <!-- selain json, bisajuga html5 fetch dan axios -->
-<h1>Berikut ini anime yg anda ketikan</h1>
 
 
-<table class="ui celled table" style="width:100%">
+
+<table class="ui sortable celled table">
         <thead>
             <tr>
                 <th>Anime title</th>
-                <th>Users reccomendation collective</th>
+                <th class="sorted ascending">Users reccomendation collective</th>
                 <th>Anime total</th>
             </tr>
         </thead>
         <tbody>
           {% for dt in data %}
           <tr>
-            <td>{{ dt[0] }}</td>
-            <td>{{ dt[1] }}</td>
+
+            <td><a href="https://myanimelist.net/anime/{{dt[0]}}">{{ dt[1] }}</a></td>
             <td>{{ dt[2] }}</td>
+            <td>{{ dt[3] }}</td>
           </tr>
           {% endfor %}
 
         </tbody>
 
     </table>
+
+    <br>
+    <br>
 
 
 
