@@ -19,5 +19,7 @@ Tujuan saya membuat ini adalah mencari tahu apakah menggabungkan kumpulan rekome
 
 Menggunakan python 3.7 dan library :
 - FastAPI (framework) [Dokumentasi FastAPI](https://fastapi.tiangolo.com/) `pip install fastapi`
-- Uvicorn 
-
+- Uvicorn `pip install uvicorn`
+- Pydantic `pip install pydantic`
+- Urllib `pip install urllib`
+- BS4 (Beautifulsoup) `pip install bs4`
