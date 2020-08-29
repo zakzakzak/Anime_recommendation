@@ -18,5 +18,6 @@ Tujuan saya membuat ini adalah mencari tahu apakah menggabungkan kumpulan rekome
 # Requirements
 
 Menggunakan python 3.7 dan library :
-- fastapi `pip install fastapi`
+- FastAPI (framework) [Dokumentasi FastAPI](https://fastapi.tiangolo.com/) `pip install fastapi`
+- Uvicorn 
 
