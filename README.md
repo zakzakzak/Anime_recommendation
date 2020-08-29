@@ -17,5 +17,6 @@ Tujuan saya membuat ini adalah mencari tahu apakah menggabungkan kumpulan rekome
 
 # Requirements
 
-Menggunakan python 3.7 dan library 'fastapi'
+Menggunakan python 3.7 dan library :
+- fastapi `pip install fastapi`
 
