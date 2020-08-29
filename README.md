@@ -15,5 +15,7 @@ Meskipun setiap page anime memiliki rekomendasi masing-masing, saya mencoba untu
 
 Tujuan saya membuat ini adalah mencari tahu apakah menggabungkan kumpulan rekomendasi setiap anime input (anime input seperti anime yang kita favoritkan) akan menghasilkan rekomendasi anime yang memiliki "feel" yang sama dengan anime inputan.
 
+# Requirements
 
+Menggunakan python 3.7 dan library 'fastapi'
 
