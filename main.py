@@ -31,16 +31,26 @@ async def create_upload_file(request : Request , anime1: str = File(...), anime2
 	arr = list(filter(("-").__ne__, arr))
 	print(arr)
 	reco = mal_scrap.big_list_recommendation(arr)
-	arr_reco = []
+	arr_reco  = []
+	arr_reco2 = []
 	for i in reco:
 		print(reco[i][0])
-		arr_reco.append([i, reco[i][0], reco[i][1], reco[i][2]])
 
-	arr_reco = sorted(arr_reco,key=lambda l:l[2], reverse=True)
+		
+		if(i in arr):
+			arr_reco2.append([i, reco[i][0], reco[i][1] * reco[i][2], "background:#34495e"])
+			arr_reco.append([i, reco[i][0],  reco[i][1],  reco[i][2], "background:#34495e"])
+		else:
+			arr_reco2.append([i, reco[i][0], reco[i][1] * reco[i][2], ""])
+			arr_reco.append([i,  reco[i][0], reco[i][1],  reco[i][2], ""])
+
+	arr_reco  = sorted(arr_reco,  key=lambda l:l[2], reverse=True)
+	arr_reco2 = sorted(arr_reco2, key=lambda l:l[2], reverse=True)
 
 	return templates.TemplateResponse("download.html",{
 	  "request" : request,
-	  "data" : arr_reco
+	  "data" : arr_reco,
+	  "data2" : arr_reco2
 	  })
 
 

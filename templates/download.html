@@ -14,21 +14,28 @@
 <!-- selain json, bisajuga html5 fetch dan axios -->
 
 
+	
+<br>
 
-<table class="ui inverted teal table">
+
+<div class="ui grid">
+
+
+              <div class="eight wide column">
+                <table class="ui inverted teal table">
         <thead>
             <tr>
                 <th></th>
                 <th>Anime title</th>
-                <th class="sorted ascending">Users reccomendation collective</th>
+                <th class="sorted ascending">Users collective</th>
                 <th>Anime total</th>
             </tr>
         </thead>
         <tbody>
-          {% set count = 1 %}
+          
 
           {% for dt in data %}
-          <tr>
+          <tr style="{{dt[4]}}">
             <td>{{loop.index}}</td>
             <td><a href="https://myanimelist.net/anime/{{dt[0]}}" style="color: rgb(255,255, 255)">{{ dt[1] }}</a></td>
             <td>{{ dt[2] }}</td>
@@ -38,7 +45,52 @@
 
         </tbody>
 
-    </table>
+</table>
+              </div>
+
+
+
+
+
+
+              <div class="eight wide column">
+                <table class="ui inverted teal table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Anime title</th>
+                <th class="sorted ascending">Users total * Anime total</th>
+            </tr>
+        </thead>
+        <tbody>
+
+          {% for dt in data2 %}
+          <tr style="{{dt[3]}}">
+            <td>{{loop.index}}</td>
+            <td><a href="https://myanimelist.net/anime/{{dt[0]}}" style="color: rgb( 255, 255, 255)">{{ dt[1] }}</a></td>
+            <td>{{ dt[2] }}</td>
+          </tr>
+          {% endfor %}
+
+        </tbody>
+
+</table>	
+              </div>
+
+
+</div>
+
+
+
+<div class="ui grid">
+
+
+              <div class="sixteen wide column">
+                <a type="submit" href="/" class="fluid ui button primary">Back</a>
+              </div>
+
+
+</div>
 
     <br>
     <br>
