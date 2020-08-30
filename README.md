@@ -28,4 +28,4 @@ Menggunakan python 3.7 dan library :
 
 # How to run
 
-Jalankan main.py, lalu buka 127.0.0.1/5001 di browser.
+Jalankan main.py, lalu buka http://127.0.0.1:5001/ di browser.
