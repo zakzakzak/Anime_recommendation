@@ -7,7 +7,7 @@ Sistem ini adalah sistem rekomendasi anime berdasarkan situs MyAnimeList (MAL). 
 
 Pada bagian bawah page, terdapat bagian rekomendasi. 
 
-![Screen shot myanimelist](image/image2.png)
+![Screen shot](image/image2.png)
 
 Terdapat kumpulan anime pada rekomendasi itu, terdapat keterangan angka setiap animenya yang menunjukkan berapa orang/user yang merekomendasikannya.
 
@@ -28,14 +28,31 @@ Menggunakan python 3.7 dan library :
 
 # How to run
 
-Jalankan main.py, lalu buka http://127.0.0.1:5001/ di browser (port bisa di ganti di main.py). Setelah itu akan muncul tampilan berikut : 
+Jalankan main.py, lalu buka http://127.0.0.1:5001/ di browser (port bisa di ganti di `main.py`). Setelah itu akan muncul tampilan berikut : 
 
-![Screen shot myanimelist](image/image3.png)
+![Screen shot](image/image3.png)
 
-Terdapat form untuk mengisi 15 kode anime, kita bisa memasukkan kurang dari itu dan mengisinya dengan "-" saja. Kita bisa memasukkan lebih dari 15 anime, namun tidak menggunakan tampilan web, hanya perlu menggunakan file mal_scrap.py, dimana hanya perlu membuat line berikut :
+Terdapat form untuk mengisi 15 kode anime, kita bisa memasukkan kurang dari itu dan mengisinya dengan "-" saja. Kita bisa memasukkan lebih dari 15 anime, namun tidak menggunakan tampilan web, hanya perlu menggunakan file `mal_scrap.py`, dimana hanya perlu membuat line berikut :
 
 ```python
 arr_anime = ["kode_anime", "contoh", "30831"]
 big_list_recommendation(arr_anime)
 ```
 
+Untuk mengetahui kode sebuah anime di situs myanimelist, bisa dicari langsung ke halaman myanimelist untuk anime yang dipilih :
+
+![Screen shot myanimelist](image/image4.png)
+
+
+Saya tidak memberi batasan berapa banyak anime yang bisa di input (semakin banyak anime input, akan semakin lama karena setiap mengunjugi halaman saya delay 1 detik agar tidak menggangu situs myanimelist), tapi, ada beberapa syarat kode bisa dimasukkan.
+
+- Merupakan anime (karena pada situs ini juga terdapat database manga)
+- Rekomendasi nya tidak berupa autorec (biasanya autorec dikarenakan anime sedang ongoing), contoh gambar dibawah ini.
+- Tidak ada kode nya
+
+Karena saya belum membuat handling untuk syarat ini, jadi lebih baik terlebih dahulu memeriksa kode nya (mengunjungi page nya).
+
+
+![Screen shot](image/image5.png)
+
+Jika sudah memasukkan kode, klik submit.
