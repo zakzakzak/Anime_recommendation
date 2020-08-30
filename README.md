@@ -59,3 +59,16 @@ Masukkan kode anime seperti gambar dibawah, untuk contoh ini, saya hanya memasuk
 
 
 ![Screen shot](image/image6.png)
+
+Setelah itu akan keluar 2 list rekomendasi seperti berikut :
+
+![Screen shot](image/image7.png)
+
+
+Seperti yang sudah saya nyatakan sebelumnya, rekomendasi ini menggabungkan rekomendasi anime-anime yang diinput. Contoh, jika ada 2 anime yang sama-sama merekomendasi sebuah anime bernama AAA, dimana AAA di rekomendasi sebanyak 10 orang/user di anime 1 dan 23 orang/user di anime 2, maka anime AAA akan memiliki nilai sebesar 33 (10 + 23).
+
+Terdapat 2 jenis rank rekomendasi, yang sebelah kiri hanya menambahkan seperti yang saya jelaskan diatas (di kolom `user collective`), sedangkan kolom `anime total` adalah jumlah anime inputan yang merekomendasikannya.
+
+Sedangkan untuk rekomendasi sebelah kanan, setelah ditambahkan jumlah user nya, lalu dikalikan dengan jumlah anime yang merekomendasikannya, contoh, kita ambil contoh yang sebelumnya, anime AAA yang setelah dijumlahkan menjadi 33 (10 + 23), lalu jumlah itu akan di kalikan dengan jumlah anime yang merekomendasikannya (33 x 2), score nya menjadi 66 (jumlah ini di dalam kolom `Users total * Anime total`). Tujuan saya ingin 'menguatkan' anime yang direkomendasikan tersebut jika terkait dengan banyak anime yang di input.
+
+Setelah itu saya akan  melakukan analisis terhadap beberapa user.
