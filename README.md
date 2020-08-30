@@ -23,3 +23,9 @@ Menggunakan python 3.7 dan library :
 - Pydantic `pip install pydantic`
 - Urllib `pip install urllib`
 - BS4 (Beautifulsoup) `pip install bs4`
+
+<!-- How to run, analysis, english -->
+
+# How to run
+
+Jalankan main.py, lalu buka 127.0.0.1/5001 di browser.
