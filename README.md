@@ -55,4 +55,7 @@ Karena saya belum membuat handling untuk syarat ini, jadi lebih baik terlebih da
 
 ![Screen shot](image/image5.png)
 
-Jika sudah memasukkan kode, klik submit.
+Masukkan kode anime seperti gambar dibawah, untuk contoh ini, saya hanya memasukkan 2 kode anime. Jika sudah memasukkan kode, klik submit. 
+
+
+![Screen shot](image/image6.png)
