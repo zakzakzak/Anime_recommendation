@@ -50,7 +50,9 @@ Saya tidak memberi batasan berapa banyak anime yang bisa di input (semakin banya
 - Rekomendasi nya tidak berupa autorec (biasanya autorec dikarenakan anime sedang ongoing), contoh gambar dibawah ini.
 - Tidak ada kode nya
 
-Karena saya belum membuat handling untuk syarat ini, jadi lebih baik terlebih dahulu memeriksa kode nya (mengunjungi page nya).
+Karena saya belum membuat handling untuk syarat ini, jadi lebih baik terlebih dahulu memeriksa kode nya (mengunjungi page nya). 
+
+Tambahan : Jumlah batasan rekomendasi yang dapat di ambil dalam sebuah halaman anime adalah 25 (batasan dari situs myanimelist), jika ingin melihat lebih harus masuk ke page rekomendasi yang lebih detil, namun itu akan memperlambat proses sampai 2 kali lipat. Menurut saya sudah 25 rekomendasi sudah cukup banyak.
 
 
 ![Screen shot](image/image5.png)
@@ -69,6 +71,9 @@ Seperti yang sudah saya nyatakan sebelumnya, rekomendasi ini menggabungkan rekom
 
 Terdapat 2 jenis rank rekomendasi, yang sebelah kiri hanya menambahkan seperti yang saya jelaskan diatas (di kolom `user collective`), sedangkan kolom `anime total` adalah jumlah anime inputan yang merekomendasikannya.
 
-Sedangkan untuk rekomendasi sebelah kanan, setelah ditambahkan jumlah user nya, lalu dikalikan dengan jumlah anime yang merekomendasikannya, contoh, kita ambil contoh yang sebelumnya, anime AAA yang setelah dijumlahkan menjadi 33 (10 + 23), lalu jumlah itu akan di kalikan dengan jumlah anime yang merekomendasikannya (33 x 2), score nya menjadi 66 (jumlah ini di dalam kolom `Users total * Anime total`). Tujuan saya ingin 'menguatkan' anime yang direkomendasikan tersebut jika terkait dengan banyak anime yang di input.
+Sedangkan untuk rekomendasi sebelah kanan, setelah ditambahkan jumlah user nya, lalu dikalikan dengan jumlah anime yang merekomendasikannya, contoh, kita ambil contoh yang sebelumnya, anime AAA yang setelah dijumlahkan menjadi 33 (10 + 23), lalu jumlah itu akan di kalikan dengan jumlah anime yang merekomendasikannya (33 x 2), score nya menjadi 66 (jumlah ini di dalam kolom `Users total * Anime total`). Tujuan saya ingin 'menguatkan' anime yang direkomendasikan tersebut jika 
+terkait dengan banyak anime yang di input.
+
+Tambahan : untuk baris yang berwarna biru gelap merupakan anime inputan. Tujuannya adalah untuk membandingkan rank anime rekomendasi dengan anime inputan. (anime inputan bisa saja tidak berada di list karena tidak ada rekomendasi dari anime input lainnya).
 
 Setelah itu saya akan  melakukan analisis terhadap beberapa user.
