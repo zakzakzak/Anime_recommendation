@@ -28,4 +28,14 @@ Menggunakan python 3.7 dan library :
 
 # How to run
 
-Jalankan main.py, lalu buka http://127.0.0.1:5001/ di browser.
+Jalankan main.py, lalu buka http://127.0.0.1:5001/ di browser (port bisa di ganti di main.py). Setelah itu akan muncul tampilan berikut : 
+
+![Screen shot myanimelist](image/image3.png)
+
+Terdapat form untuk mengisi 15 kode anime, kita bisa memasukkan kurang dari itu dan mengisinya dengan "-" saja. Kita bisa memasukkan lebih dari 15 anime, namun tidak menggunakan tampilan web, hanya perlu menggunakan file mal_scrap.py, dimana hanya perlu membuat line berikut :
+
+```python
+arr_anime = ["kode_anime", "contoh", "30831"]
+big_list_recommendation(arr_anime)
+```
+
