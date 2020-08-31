@@ -75,5 +75,3 @@ Sedangkan untuk rekomendasi sebelah kanan, setelah ditambahkan jumlah user nya, 
 terkait dengan banyak anime yang di input.
 
 Tambahan : untuk baris yang berwarna biru gelap merupakan anime inputan. Tujuannya adalah untuk membandingkan rank anime rekomendasi dengan anime inputan. (anime inputan bisa saja tidak berada di list karena tidak ada rekomendasi dari anime input lainnya).
-
-Setelah itu saya akan  melakukan analisis terhadap beberapa user.

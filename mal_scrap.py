@@ -98,7 +98,6 @@ def big_list_recommendation(arr_anime):
 #     uprint(big_ls[i])
 
 """
-Rezero s1 = 31240
 Steins;gate = 9253
 Konosuba = 30831
 
