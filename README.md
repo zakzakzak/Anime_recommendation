@@ -18,11 +18,16 @@ Tujuan saya membuat ini adalah mencari tahu apakah menggabungkan kumpulan rekome
 # Requirements
 
 Menggunakan python 3.7 dan library :
-- FastAPI (framework) [Dokumentasi FastAPI](https://fastapi.tiangolo.com/) `pip install fastapi`
-- Uvicorn `pip install uvicorn`
-- Pydantic `pip install pydantic`
-- Urllib `pip install urllib`
-- BS4 (Beautifulsoup) `pip install bs4`
+- FastAPI (framework) [Dokumentasi FastAPI](https://fastapi.tiangolo.com/)
+- Uvicorn
+- Pydantic
+- Urllib
+- BS4 (Beautifulsoup)
+
+Untuk meginstall requirements, silahkan run:
+```
+pip install -r requirements.txt
+```
 
 <!-- How to run, analysis, english -->
 

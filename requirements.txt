@@ -1,0 +1,13 @@
+beautifulsoup4==4.9.3
+bs4==0.0.1
+click==7.1.2
+fastapi==0.61.1
+h11==0.10.0
+Jinja2==2.11.2
+MarkupSafe==1.1.1
+pydantic==1.6.1
+python-multipart==0.0.5
+six==1.15.0
+soupsieve==2.0.1
+starlette==0.13.6
+uvicorn==0.12.1
